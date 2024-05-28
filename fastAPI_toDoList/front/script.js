@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const task = await response.json();
             addTaskToDOM(task);
             taskForm.reset();
+        } else {
+            console.error("Failed to create task", await response.json());
         }
     });
 
